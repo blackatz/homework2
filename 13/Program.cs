@@ -4,26 +4,29 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-Console.Write("Введите число: ");
+Console.WriteLine("Введите число: ");
 int number = int.Parse(Console.ReadLine()!);
 
- int ThreeHundred(int number)
-
+int ThreeHundred(int number)
  {
-      if (number < 100)
-          {
-          Console.WriteLine("Третьей цифры нет");
-          }
-      else
-          {
-          while(number > 1000)
-          {
-          number = number/10;
-          }
-          }
-      return number = number - number/10*10;
-      }
+    if (number > 100)
+    {
+        while (number > 1000)
+        {
+            number = number / 10;
+        }
+    number = number - number/10*10;
+    Console.WriteLine("Третье число " + number);
+    }
 
-int finish = ThreeHundred(number);
-Console.WriteLine("Третья цифра: " + finish);
+    else
+    {
+        Console.Write("Нет третьего числа");
+    }
+
+    return number = number - number/10*10;
+    
+ }
+
+ThreeHundred(number);
 
